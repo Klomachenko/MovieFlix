@@ -14,7 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // 리뷰 /movies/id/reviews
 function App() {
   return (
-    <div>
+    <div className='App'>
       <Routes>
         <Route path='/' element={<AppLayout />}>
           <Route index element={<HomePage />} />

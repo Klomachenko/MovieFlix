@@ -4,15 +4,20 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Outlet } from 'react-router-dom';
 
 const AppLayout = () => {
   return (
     <div>
-      <Navbar expand='lg' className='bg-body-tertiary'>
+      <Navbar bg='black' data-bs-theme='dark' expand='lg'>
         <Container fluid>
-          <Navbar.Brand href='#'>Navbar scroll</Navbar.Brand>
+          <Navbar.Brand href='/'>
+            <img
+              style={{ width: '70px' }}
+              src='https://images.ctfassets.net/y2ske730sjqp/821Wg4N9hJD8vs5FBcCGg/9eaf66123397cc61be14e40174123c40/Vector__3_.svg?w=460'
+              alt=''
+            />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbarScroll' />
           <Navbar.Collapse id='navbarScroll'>
             <Nav
@@ -20,8 +25,8 @@ const AppLayout = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href='#action1'>Home</Nav.Link>
-              <Nav.Link href='#action2'>Link</Nav.Link>
+              <Nav.Link href='/'>Home</Nav.Link>
+              <Nav.Link href='/movies'>Movie</Nav.Link>
             </Nav>
             <Form className='d-flex'>
               <Form.Control
@@ -30,7 +35,7 @@ const AppLayout = () => {
                 className='me-2'
                 aria-label='Search'
               />
-              <Button variant='outline-success'>Search</Button>
+              <Button variant='outline-danger'>Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>
