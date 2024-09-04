@@ -1,11 +1,10 @@
 import React from 'react';
 import Alert from 'react-bootstrap/Alert';
-import { usePopularMoviesQuery } from '../../../hooks/usePopularMovies';
+import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies';
 import './Banner.style.css';
 
 const Banner = () => {
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
-  console.log('ddd', data);
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
