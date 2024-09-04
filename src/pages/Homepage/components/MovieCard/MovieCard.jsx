@@ -1,5 +1,6 @@
 import React from 'react';
 import Badge from 'react-bootstrap/Badge';
+import './MovieCard.style.css';
 
 const MovieCard = ({ movie }) => {
   console.log('moviecard', movie);
@@ -11,8 +12,9 @@ const MovieCard = ({ movie }) => {
           `https://media.themoviedb.org/t/p/w440_and_h660_face${movie.poster_path}` +
           ')',
       }}
+      className='movie-card'
     >
-      <div>
+      <div className='overlay'>
         <h1>{movie.title}</h1>
         {movie.genre_ids.map((id) => (
           <Badge bg='warning'>{id}</Badge>
