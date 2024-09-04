@@ -41,6 +41,7 @@ const PopularMovieSlide = () => {
         dotListClass='movie-slider p-1'
         itemClass='carousel-container'
         responsive={responsive}
+        className='carousel-container'
       >
         {data?.results.map((movie, index) => (
           <MovieCard movie={movie} key={index} />
