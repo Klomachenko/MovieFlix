@@ -1,0 +1,16 @@
+.carousel-container {
+  overflow: hidden; /* 자식 요소가 커질 때 잘리지 않도록 설정 */
+  height: 440px;
+}
+
+.movie-slider-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-slider-container > h3 {
+  z-index: 2;
+  margin-bottom: -30px;
+  font-weight: 700;
+  font-size: 2rem;
+}

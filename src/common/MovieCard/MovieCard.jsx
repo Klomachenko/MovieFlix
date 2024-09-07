@@ -6,7 +6,7 @@ import { FaFireAlt } from 'react-icons/fa';
 import { MdNoAdultContent } from 'react-icons/md';
 
 const MovieCard = ({ movie }) => {
-  console.log('moviecard', movie);
+  // console.log('moviecard', movie);
   return (
     <div
       style={{
