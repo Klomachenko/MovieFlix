@@ -1,0 +1,12 @@
+.carousel-container {
+  overflow: hidden; /* 자식 요소가 커질 때 잘리지 않도록 설정 */
+  height: 440px;
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 330px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
