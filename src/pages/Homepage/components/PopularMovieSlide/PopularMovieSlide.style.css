@@ -1,5 +1,4 @@
 .carousel-container {
-  overflow: visible; /* 자식 요소가 커질 때 잘리지 않도록 설정 */
+  overflow: hidden; /* 자식 요소가 커질 때 잘리지 않도록 설정 */
   height: 440px;
-  position: relative; /* z-index 관리를 위해 position 속성을 추가 */
 }

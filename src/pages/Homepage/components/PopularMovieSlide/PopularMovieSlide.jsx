@@ -39,9 +39,8 @@ const PopularMovieSlide = () => {
         infinite={true}
         centerMode={true}
         dotListClass='movie-slider p-1'
-        itemClass='carousel-container'
+        containerClass='carousel-container'
         responsive={responsive}
-        className='carousel-container'
       >
         {data?.results.map((movie, index) => (
           <MovieCard movie={movie} key={index} />
