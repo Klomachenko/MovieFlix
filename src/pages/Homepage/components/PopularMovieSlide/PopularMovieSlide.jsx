@@ -1,5 +1,5 @@
 import React from 'react';
-import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies';
+import { usePopularMoviesQuery } from '../../../../hooks/useMovies';
 import { Alert } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -9,7 +9,6 @@ import { responsive } from '../../../../constants/responsive';
 
 const PopularMovieSlide = () => {
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
-  console.log(data);
 
   if (isLoading) {
     return <h1>Loading...</h1>;
