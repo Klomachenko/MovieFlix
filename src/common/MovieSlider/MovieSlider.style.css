@@ -3,21 +3,13 @@
   height: 440px;
 }
 
-@medias (max-width: 480px) {
-  .carousel-container {
-    overflow: hidden;
-    height: 330px;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
 .movie-slider-container {
   display: flex;
   flex-direction: column;
 }
 
 .movie-slider-container > h3 {
+  z-index: 2;
   margin-bottom: -30px;
   font-weight: 700;
   font-size: 2rem;
