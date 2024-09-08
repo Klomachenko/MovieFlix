@@ -9,7 +9,17 @@ import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
 const MovieCard = ({ movie }) => {
   // console.log('moviecard', movie);
   const { data: genreData } = useMovieGenreQuery();
-  console.log('ggg', genreData);
+  // console.log('ggg', genreData);
+
+  const showGenre = (genreIdList) => {
+    if (!genreData) return [];
+    const genreNameList = genreIdList.map((id) => {
+      const genreObj = genreData.find((genre) => genre.id === id);
+      return genreObj.name;
+    });
+
+    return genreNameList;
+  };
   return (
     <div
       style={{
@@ -26,7 +36,7 @@ const MovieCard = ({ movie }) => {
         </div>
         <div className='overlay-content'>
           <div className='overlay-badge'>
-            {movie.genre_ids.map((id) => (
+            {showGenre(movie.genre_ids).map((id) => (
               <Badge bg='warning'>{id}</Badge>
             ))}
           </div>
