@@ -4,9 +4,12 @@ import './MovieCard.style.css';
 import { FaUser } from 'react-icons/fa';
 import { FaFireAlt } from 'react-icons/fa';
 import { MdNoAdultContent } from 'react-icons/md';
+import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
 
 const MovieCard = ({ movie }) => {
   // console.log('moviecard', movie);
+  const { data: genreData } = useMovieGenreQuery();
+  console.log('ggg', genreData);
   return (
     <div
       style={{
