@@ -18,7 +18,12 @@ const AppLayout = () => {
   };
   return (
     <div>
-      <Navbar bg='black' data-bs-theme='dark' expand='lg'>
+      <Navbar
+        bg='black'
+        data-bs-theme='dark'
+        expand='lg'
+        style={{ zIndex: '20' }}
+      >
         <Container fluid>
           <Navbar.Brand href='/'>
             <img
