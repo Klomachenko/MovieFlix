@@ -7,9 +7,10 @@ const fetchSearchMovie = ({ keyword }) => {
     : api.get(`/movie/popular`);
 };
 
-export const useSearchMovieQuery = (keyword) => {
+export const useSearchMovieQuery = ({ keyword }) => {
   return useQuery({
     queryKey: ['movie-search', keyword],
     queryFn: () => fetchSearchMovie({ keyword }),
+    select: (result) => result.data,
   });
 };
