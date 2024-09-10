@@ -9,7 +9,7 @@ import { responsive } from '../../../../constants/responsive';
 
 const UpComingMovieSlider = () => {
   const { data, isLoading, isError, error } = useUpComingMoviesQuery();
-  console.log(data);
+  // console.log(data);
 
   if (isLoading) {
     return <h1>Loading...</h1>;
