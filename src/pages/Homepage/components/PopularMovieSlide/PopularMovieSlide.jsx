@@ -9,6 +9,11 @@ import { responsive } from '../../../../constants/responsive';
 
 const PopularMovieSlide = () => {
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
+  console.log('popular', data);
+
+  const handleMovieClick = (movieId) => {
+    console.log('클릭한 영화 아이디', movieId);
+  };
 
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -23,6 +28,7 @@ const PopularMovieSlide = () => {
         title='Popular Movies'
         movies={data.results}
         responsive={responsive}
+        handleMovieClick={handleMovieClick}
       />
     </div>
   );

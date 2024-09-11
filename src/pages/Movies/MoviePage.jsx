@@ -17,7 +17,7 @@ const MoviePage = () => {
   const [query, setQueyry] = useSearchParams();
   const [page, setPage] = useState(1);
   const keyword = query.get('q');
-  console.log(keyword);
+  // console.log(keyword);
 
   const { data, isLoading, isError, error } = useSearchMovieQuery({
     keyword,
