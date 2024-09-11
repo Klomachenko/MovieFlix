@@ -7,7 +7,7 @@ import { MdNoAdultContent } from 'react-icons/md';
 import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
 
 const MovieCard = ({ movie, handleMovieClick }) => {
-  // console.log(movie);
+  // console.log(movie.id);
   // console.log('moviecard', movie);
   const { data: genreData } = useMovieGenreQuery();
   // console.log('ggg', genreData);
