@@ -6,9 +6,18 @@ import 'react-multi-carousel/lib/styles.css';
 import MovieCard from '../../../../common/MovieCard/MovieCard';
 import MovieSlider from '../../../../common/MovieSlider/MovieSlider';
 import { responsive } from '../../../../constants/responsive';
+import { useNavigate } from 'react-router-dom';
 
 const PopularMovieSlide = () => {
+  const navigate = useNavigate();
+
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
+  console.log('popular', data);
+
+  const handleMovieClick = (movieId) => {
+    console.log('클릭한 영화 아이디', movieId);
+    navigate(`/movies/${movieId}`);
+  };
 
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -23,6 +32,7 @@ const PopularMovieSlide = () => {
         title='Popular Movies'
         movies={data.results}
         responsive={responsive}
+        handleMovieClick={handleMovieClick}
       />
     </div>
   );

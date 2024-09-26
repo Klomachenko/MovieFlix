@@ -6,7 +6,8 @@ import { FaFireAlt } from 'react-icons/fa';
 import { MdNoAdultContent } from 'react-icons/md';
 import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, handleMovieClick }) => {
+  // console.log(movie.id);
   // console.log('moviecard', movie);
   const { data: genreData } = useMovieGenreQuery();
   // console.log('ggg', genreData);
@@ -20,6 +21,7 @@ const MovieCard = ({ movie }) => {
 
     return genreNameList;
   };
+
   return (
     <div
       style={{
@@ -29,6 +31,7 @@ const MovieCard = ({ movie }) => {
           ')',
       }}
       className='movie-card'
+      onClick={() => handleMovieClick(movie.id)}
     >
       <div className='overlay'>
         <div className='overlay-title'>
