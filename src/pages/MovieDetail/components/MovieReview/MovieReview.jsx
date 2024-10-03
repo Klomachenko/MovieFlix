@@ -14,6 +14,7 @@ const MovieReview = ({ movieId }) => {
 
   return (
     <div>
+      <h2>Reviews</h2>
       {data?.results.map((review, index) => (
         <div>
           <h2>리뷰어 : {review.author}</h2> <p>리뷰 내용 : {review.content}</p>

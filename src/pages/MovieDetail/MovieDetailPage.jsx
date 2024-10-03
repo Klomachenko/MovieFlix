@@ -1,9 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useMovieDetailQuery } from '../../hooks/useMovieDetail';
-import { Alert, Col, Row } from 'react-bootstrap';
-import { useMovieReviewQuery } from '../../hooks/useMovieReview';
-import { useMovieRecommendationQuery } from '../../hooks/useMovieRecommendation';
 import './MovieDetailPage.style.css';
 import MovieInformation from './components/MovieInformation/MovieInformation';
 import MovieReview from './components/MovieReview/MovieReview';

@@ -1,0 +1,54 @@
+.box img {
+  height: 600px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.icon-box {
+  display: flex;
+  gap: 10px;
+}
+
+.content overlay-badge {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.content overlay-info {
+  display: flex;
+  gap: 3px;
+}
+
+.content overlay-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content overlay-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.overview {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.overview p {
+  margin-bottom: 0;
+}
+
+.sub-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
