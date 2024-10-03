@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  border: 1px solid white;
+  width: 70%;
+  height: auto;
+  margin: 0 auto; /* 좌우 중앙 정렬을 위한 설정 */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
