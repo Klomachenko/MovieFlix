@@ -54,15 +54,15 @@ const MovieInformation = ({ movieId }) => {
         </div>
         <div className='sub-info'>
           <div className='overlay-icon'>
-            <FaMoneyBill />
+            <FaMoneyBill style={{ color: 'green' }} />
             {data.budget}$
           </div>
           <div className='overlay-icon'>
-            <FaCoins />
+            <FaCoins style={{ color: 'gold' }} />
             {data.revenue}
           </div>
           <div className='overlay-icon'>
-            <FaCalendar />
+            <FaCalendar style={{ color: 'rgb(247, 114, 112)' }} />
             {data.release_date}
           </div>
           <div className='overlay-icon'>
