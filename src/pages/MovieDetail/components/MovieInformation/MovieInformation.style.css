@@ -52,3 +52,8 @@
   flex-direction: column;
   gap: 5px;
 }
+
+.genres {
+  display: flex;
+  gap: 10px;
+}

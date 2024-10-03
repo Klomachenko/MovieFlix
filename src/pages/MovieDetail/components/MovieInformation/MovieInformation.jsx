@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert, Col, Row } from 'react-bootstrap';
+import { Alert, Badge, Col, Row } from 'react-bootstrap';
 import { useMovieDetailQuery } from '../../../../hooks/useMovieDetail';
 import './MovieInformation.style.css';
 import { FaCalendar, FaClock, FaUser } from 'react-icons/fa';
@@ -9,6 +9,7 @@ import { FaCoins } from 'react-icons/fa';
 
 const MovieInformation = ({ movieId }) => {
   const { data, isLoading, isError, error } = useMovieDetailQuery(movieId);
+  console.log('영화정보', data.genres);
 
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -29,13 +30,21 @@ const MovieInformation = ({ movieId }) => {
         <h1>{data.title}</h1>
         <h4>{data.tagline}</h4>
 
+        <div className='genres'>
+          {data?.genres.map((genre, index) => (
+            <div>
+              <Badge bg='warning'>{genre.name}</Badge>
+            </div>
+          ))}
+        </div>
+
         <div className='icon-box'>
           <div className='overlay-icon'>
-            <FaUser />
+            <FaUser style={{ color: 'rgb(255, 193, 7)' }} />
             {data.vote_average}
           </div>
           <div className='overlay-icon'>
-            <FaFireAlt />
+            <FaFireAlt style={{ color: 'red' }} />
             {data.popularity}
           </div>
         </div>
